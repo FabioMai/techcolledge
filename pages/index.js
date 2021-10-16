@@ -25,9 +25,8 @@ export default function Home() {
   return (
     // <Header>
     <>
-    
-    <div className="flex flex-col justify-between min-h-screen py-6 bg-gray-100">
-    <img className="absolute bg-center w-full animate-pulse" src="hero_image_pale_mobile.svg"></img>
+    <img className="absolute h-full max-h-full animate-pulse" src="hero_image_pale_mobile.svg"></img>
+    <div className="flex flex-col justify-between min-h-screen py-6 bg-gray-100">    
       <p className="invisible mx-auto text-xs font-bold align-bottom">TechColledge Squad 2021</p>
       <div className="relative py-3 sm:max-w-xl sm:mx-auto">
         <div className="absolute inset-0 transform -skew-y-6 shadow-lg bg-gradient-to-r from-secondary to-primary sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
@@ -77,12 +76,9 @@ const questions = [
   "IF YOU HAD TO MOVE TO A DIFFERENT PLACE, WHERE WOULD YOU MOVE AND WHY?",
   "IF YOU WERE GOING TO A DESERTED ISLAND AND COULD ONLY TAKE THREE THINGS WITH YOU, WHAT WOULD YOU TAKE? WHY?",
   "WHEN YOU WERE GROWING UP WHAT DID YOU WANT  TO BECOME IN LIFE?",
-  "IF YOU COULD TRAVEL  BACK IN TIME AND MEET YOURSELF AS A 10 YEAR OLD WHAT ADVICE WOULD YOU WANT TO GIVE YOURSELF?",
   "IF YOU COULD DO ANY JOB, WHAT WOULD YOU LIKE TO DO?",
   "IF YOU HAD EVERYONE IN THE WORLDS UNDIVIDED ATTENTION FOR 20 MINUTES, WHAT WOULD YOU TELL US?",
   "WHAT ACTIVITIES MAKE YOU LOSE TRACK OF TIME?",
-  "WHAT ARE YOU MOST GRATEFUL FOR?",
-  "WHAT IS YOUR “GO-TO” JOKE OR FUNNY STORY? ",
   "WHEN YOU THINK OF HOME, WHAT IMMEDIATELY COMES TO MIND?",
   "WHAT CAN YOU DO TODAY THAT YOU COULDN’T  DO A YEAR AGO?",
   "WHAT IS SOMETHING THAT YOU THINK A LOT OF PEOPLE MISUNDERSTAND THAT  YOU KNOW A LOT ABOUT?",
