@@ -2,7 +2,9 @@ import { useState } from "react";
 import Header from "../components/header";
 
 export default function Home() {
-  const [currentQuestion, setCurrentQuestion] = useState(questions[Math.floor(Math.random() * 20)]);
+  const [currentQuestion, setCurrentQuestion] = useState(
+    questions[Math.floor(Math.random() * 20)]
+  );
 
   let nextQuestion = () => {
     if (questions.indexOf(currentQuestion) < questions.length - 1) {
@@ -19,51 +21,68 @@ export default function Home() {
   let getRandomQuestion = () => {
     let question = questions[Math.floor(Math.random() * questions.length)];
     // guarantee that a new question is returned to avoid duplicates
-    return question != currentQuestion ? question : questions[(questions.indexOf(question) + 1) / 2];
+    return question != currentQuestion
+      ? question
+      : questions[(questions.indexOf(question) + 1) / 2];
   };
 
   return (
     // <Header>
     <>
-    <img className="absolute h-full max-h-full animate-pulse" src="hero_image_pale_mobile.svg"></img>
-    <div className="flex flex-col justify-between min-h-screen py-6 bg-gray-100">    
-      <p className="invisible mx-auto text-xs font-bold align-bottom">TechColledge Squad 2021</p>
-      <div className="relative py-3 sm:max-w-xl sm:mx-auto">
-        <div className="absolute inset-0 transform -skew-y-6 shadow-lg bg-gradient-to-r from-secondary to-primary sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
-        <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-12">
-          <div className="max-w-md mx-auto">
-            <img className="w-40 mx-auto" src="netlight_logo.svg"></img>
-            <p className="py-4 text-center">
-              {questions.indexOf(currentQuestion) + 1} / {questions.length}
-            </p>
-            <p className="text-3xl font-extrabold text-center uppercase">{currentQuestion}</p>
-            <div className="flex flex-row justify-center w-full pt-8">
-              <button
-                className={questions.indexOf(currentQuestion) == 0 ? "invisible px-4" : "px-4 underline"}
-                onClick={() => previousQuestion()}
-              >
-                Previous
-              </button>
-              <button
-                className="px-6 py-4 font-bold text-black bg-primary rounded-full hover:bg-purple-300  motion-safe:hover:scale-110"
-                onClick={() => setCurrentQuestion(getRandomQuestion)}
-              >
-                Shuffle
-              </button>
-              <button
-                className={
-                  questions.indexOf(currentQuestion) == questions.length - 1 ? "invisible px-4" : "px-4 underline"
-                }
-                onClick={() => nextQuestion()}
-              >
-                Next
-              </button>
+      <img
+        className="absolute h-full max-h-full animate-pulse"
+        src="hero_image_pale_mobile.svg"
+      ></img>
+      <div className="flex flex-col justify-between min-h-screen py-6 bg-gray-100">
+        <p className="invisible mx-auto text-xs font-bold align-bottom">
+          TechColledge Squad 2021
+        </p>
+        <div className="relative py-3 sm:max-w-xl sm:mx-auto">
+          <div className="absolute inset-0 transform -skew-y-6 shadow-lg bg-gradient-to-r from-secondary to-primary sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
+          <div className="relative px-4 py-10 bg-white shadow-lg sm:rounded-3xl sm:p-12">
+            <div className="max-w-md mx-auto">
+              <img className="w-40 mx-auto" src="netlight_logo.svg"></img>
+              <p className="py-4 text-center">
+                {questions.indexOf(currentQuestion) + 1} / {questions.length}
+              </p>
+              <p className="text-3xl font-extrabold text-center uppercase">
+                {currentQuestion}
+              </p>
+              <div className="flex flex-row justify-center w-full pt-8">
+                <button
+                  className={
+                    questions.indexOf(currentQuestion) == 0
+                      ? "invisible px-4"
+                      : "px-4 underline"
+                  }
+                  onClick={() => previousQuestion()}
+                >
+                  Previous
+                </button>
+                <button
+                  className="px-6 py-4 font-bold text-black bg-primary rounded-full hover:bg-purple-300  motion-safe:hover:scale-110"
+                  onClick={() => setCurrentQuestion(getRandomQuestion)}
+                >
+                  Shuffle
+                </button>
+                <button
+                  className={
+                    questions.indexOf(currentQuestion) == questions.length - 1
+                      ? "invisible px-4"
+                      : "px-4 underline"
+                  }
+                  onClick={() => nextQuestion()}
+                >
+                  Next
+                </button>
+              </div>
             </div>
           </div>
         </div>
+        <p className="mx-auto text-xs font-bold align-bottom">
+          TechColledge Squad 2021
+        </p>
       </div>
-      <p className="mx-auto text-xs font-bold align-bottom">TechColledge Squad 2021</p>
-    </div>
     </>
     // </Header>
   );
@@ -102,9 +121,10 @@ const questions = [
   "WHAT SMELL BRINGS BACK GREAT MEMORIES?",
   "IF YOU COULD INVITE ANYONE IN THE WORLD TO DINNER, WHO WOULD IT BE?",
   "WOULD YOU LIKE TO BE FAMOUS? IN WHAT WAY?",
-  "WHAT WOULD CONSTITUTE A “PERFECT” DAY FOR YOU?","IF YOU COULD CHANGE ANYTHING ABOUT THE WAY YOU WERE RAISED, WHAT WOULD IT BE?",
+  "WHAT WOULD CONSTITUTE A “PERFECT” DAY FOR YOU?",
+  "IF YOU COULD CHANGE ANYTHING ABOUT THE WAY YOU WERE RAISED, WHAT WOULD IT BE?",
   "WHAT ROLES DO LOVE AND AFFECTION PLAY IN YOUR LIFE?",
   "WHO’S SOMEONE YOU’VE BEEN THINKING ABOUT OFTEN RECENTLY? WHY?",
   "WHAT’S AN INTERESTING THING YOU RECENTLY GOOGLED?",
-  "IF YOU KNEW YOU COULD NOT FAIL, WHAT IS THE ONE THING YOU’D LIKE TO ACCOMPLISH?"
+  "IF YOU KNEW YOU COULD NOT FAIL, WHAT IS THE ONE THING YOU’D LIKE TO ACCOMPLISH?",
 ];
