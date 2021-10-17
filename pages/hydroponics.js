@@ -43,14 +43,26 @@ export default function Hydroponics() {
               <div className="flex flex-row justify-center w-full pt-8">
                 <button
                   className={
-                    questions.indexOf(currentQuestion) == questions.length - 1
-                      ? "invisible px-4"
+                    questions.indexOf(currentQuestion) == 0
+                      ? "invisible px-6 py-4 font-bold text-white bg-plantDark rounded-full motion-safe:hover:scale-110"
                       : "px-6 py-4 font-bold text-white bg-plantDark rounded-full motion-safe:hover:scale-110"
                   }
-                  onClick={() => nextQuestion()}
+                  onClick={() => previousQuestion()}
+                >
+                  Previous
+                </button>
+                <p className="px-6 py-4 text-center"></p>
+                <button
+                  className={
+                    questions.indexOf(currentQuestion) == questions.length - 1
+                      ? "invisible px-6 py-4 font-bold text-white bg-plantDark rounded-full motion-safe:hover:scale-110"
+                      : "px-6 py-4 font-bold text-white bg-plantDark rounded-full motion-safe:hover:scale-110"
+                  }
+                  onClick={
+                    () => nextQuestion()}
                 >
                   Next
-                </button>
+                </button> 
               </div>
             </div>
           </div>
@@ -80,5 +92,5 @@ export default function Hydroponics() {
 const questions = [
   "WHAT'S YOUR PERSONAL TRACK RECORD GROWING PLANTS OR VEGETABLES?",
   "WHAT DO YOU IMAGINE THE FUTURE OF FARMING TO LOOK LIKE?",
-  "ANY IDEAS ON WHAT HYDROPONIC SYSTEMS ARE/ COULD LOOK LIKE?",
+  "ANY IDEAS ON WHAT HYDROPONIC SYSTEMS ARE/ COULD LOOK LIKE?"
 ];
