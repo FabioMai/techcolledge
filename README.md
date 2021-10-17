@@ -1,4 +1,4 @@
-# TechColledge IceBreaker w Next.js + Tailwind CSS
+# Tech CollEDGE IceBreaker w Next.js + Tailwind CSS
 
 This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
 
@@ -18,4 +18,4 @@ Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_mediu
 
 ## How to use
 
-Clone the repo and execute ```npm install``` to install dependencies. Afterwards try to run it with ```npm run dev```. In case TailwindCSS is still missing, run ``npm install -D tailwindcss@latest postcss@latest autoprefixer@latest``` and then re-run ```npm run dev```.
+Clone the repo and execute `npm install` to install dependencies. Afterwards try to run it with `npm run dev`. In case TailwindCSS is still missing, run ``npm install -D tailwindcss@latest postcss@latest autoprefixer@latest`and then re-run`npm run dev```.

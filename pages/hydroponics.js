@@ -27,7 +27,7 @@ export default function Hydroponics() {
       </div>
       <div className="flex flex-col justify-between min-h-screen py-6 bg-gray-100">
         <p className="invisible mx-auto text-xs font-bold align-bottom">
-          TechColledge Squad 2021
+          Tech CollEDGE Squad 2021
         </p>
         <div className="relative py-3 sm:max-w-xl sm:mx-auto">
           <div className="absolute inset-0 transform -skew-y-6 shadow-lg bg-gradient-to-r from-plantLight to-plantDark sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
@@ -55,8 +55,21 @@ export default function Hydroponics() {
             </div>
           </div>
         </div>
-        <p className="mx-auto text-xs font-bold align-bottom">
-          TechColledge Squad 2021
+        <p className="mx-auto text-xs text-center align-bottom">
+          Tech CollEDGE Squad 2021 <br></br>
+          <small>
+            Image Credit: Plant Vector from{" "}
+            <a
+              href="https://all-free-download.com/free-vector/download/plant-pattern-leaf-pot-icons-colored-design_6840621.html"
+              target="_blank"
+            >
+              all-free-download.com
+            </a>
+            <br></br>
+            This site is not endorsed by Netlight in any way. Netlight is a
+            trademark of{" "}
+            <a href="https://www.netlight.com/">Netlight Consulting</a>.
+          </small>
         </p>
       </div>
     </>
